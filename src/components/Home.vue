@@ -2,7 +2,7 @@
      <main>
        <v-content>
          <section>
-           <v-parallax src="../assets/hero.jpeg" height="600">
+           <v-parallax src="//s3.amazonaws.com/iafrohack-frontend/images/hero.jpeg" height="600">
              <v-layout
                column
                align-center
@@ -94,7 +94,7 @@
          </section>
 
          <section>
-           <v-parallax src="../assets/section.jpeg" height="380">
+           <v-parallax src="//s3.amazonaws.com/iafrohack-frontend/images/section.jpeg" height="380">
              <v-layout column align-center justify-center>
                <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
                <em>Kick-start your application today</em>
