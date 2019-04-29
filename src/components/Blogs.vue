@@ -1,5 +1,9 @@
 <template>
-  <p> This is a preview of all of the blogs</p>
+  <div class="blogs-list">
+    <img src="https://s3.amazonaws.com/iafrohack-frontend/images/afrohack-view-background-image.jpg"
+    alt="blogs list background image"
+    />
+  </div>
 </template>
 <script>
 export default {
@@ -33,4 +37,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>

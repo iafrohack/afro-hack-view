@@ -19,6 +19,7 @@
           <v-icon>code</v-icon>
          Blog
         </v-tab>
+
       </v-tabs>
    <v-fade-transition mode="out-in">
        <router-view></router-view>
@@ -70,4 +71,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
