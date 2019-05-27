@@ -1,19 +1,32 @@
 <template>
   <div class="blogs-list">
-    <div v-for="blogPost in blogPosts">
-      <blog-post-viewer :blog-post-id="blogPost.id" />
-    </div>
+   <v-layout>
+      <v-flex md12 md6>
+        <v-card>
+          <v-container v-bind="{ 'grid-list-md': true }" fluid>
+            <v-layout row wrap>
+              <v-flex
+                v-for="blogPost in blogPosts"
+                :key="blogPost.id"
+                md6>
+             <blog-post-previewer :blog-post="blogPost" />
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 <script>
 
 import BlogPostsService from '@/services/blogPostsService';
-import BlogPostViewer from '@/components/BlogPostViewer';
+import BlogPostPreviewer from '@/components/BlogPostPreviewer';
 
 export default {
   name: 'BlogPosts',
   components: {
-    BlogPostViewer,
+    BlogPostPreviewer,
   },
   mounted() {
     BlogPostsService.getAllBlogPosts(this);

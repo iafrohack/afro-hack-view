@@ -1,5 +1,8 @@
 <template>
   <p> This is a Blog View. postId: {{ blogPostId }} </p>
+
+  
+
 </template>
 <script>
 export default {

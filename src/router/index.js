@@ -25,7 +25,7 @@ export default new Router({
       path: '/blogPosts/{:blogPostId}',
       name: 'blogPost',
       component: BlogPostViewer,
-      props: true,
+      props: route => ({ blogPostId: route.params.blogPostId }),
     },
 
     { path: '*', redirect: '/' },
