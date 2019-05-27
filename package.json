@@ -12,6 +12,9 @@
     "s3-deploy": "aws s3 sync ./dist s3://iafrohack-frontend"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.11",
     "vue": "^2.5.2",
     "vue-material": "^0.8.1",
     "vue-router": "^3.0.1",

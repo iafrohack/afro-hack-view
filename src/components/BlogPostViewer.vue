@@ -1,12 +1,12 @@
 <template>
-  <p> This is a Blog View </p>
+  <p> This is a Blog View. postId: {{ blogPostId }} </p>
 </template>
 <script>
 export default {
-  name: 'BlogViewer',
+  name: 'BlogPostViewer',
   props: {
-    blogId: {
-      type: String,
+    blogPostId: {
+      type: Number,
       required: true,
     },
   },

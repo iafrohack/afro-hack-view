@@ -17,7 +17,7 @@
                  dark
                  large>
 
-               <v-tab :to="{name: 'blogs'}" ripple>
+               <v-tab :to="{name: 'blogPosts'}" ripple>
                    <v-icon>code</v-icon>
                      Check out the blogs...
                 </v-tab>
@@ -107,7 +107,7 @@
                  class="blue lighten-2 mt-5"
                  dark
                  large>
-                 <v-tab :to="{name: 'blogs'}" ripple>
+                 <v-tab :to="{name: 'blogPosts'}" ripple>
                    <v-icon>code</v-icon>
                      Learn more...
                 </v-tab>

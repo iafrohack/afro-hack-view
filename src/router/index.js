@@ -2,8 +2,8 @@ import Vue from 'vue';
 // import VueMaterial from 'vue-material';
 import Router from 'vue-router';
 import Home from '@/components/Home';
-import BlogViewer from '@/components/BlogViewer';
-import Blogs from '@/components/Blogs';
+import BlogPostViewer from '@/components/BlogPostViewer';
+import BlogPosts from '@/components/BlogPosts';
 
 // Vue.use(VueMaterial);
 Vue.use(Router);
@@ -17,14 +17,14 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/blogs',
-      name: 'blogs',
-      component: Blogs,
+      path: '/blogPosts',
+      name: 'blogPosts',
+      component: BlogPosts,
     },
     {
-      path: '/blogs/{:blogId}',
-      name: 'blog',
-      component: BlogViewer,
+      path: '/blogPosts/{:blogPostId}',
+      name: 'blogPost',
+      component: BlogPostViewer,
       props: true,
     },
 
