@@ -11,11 +11,11 @@
         dark
         slider-color="yellow">
 
-        <v-tab :to="{name: 'home'}" ripple>
+        <v-tab :to="{ name: 'home'}" ripple>
           <v-icon>home</v-icon>
          Home
         </v-tab>
-        <v-tab :to="{name: 'blogs'}" ripple>
+        <v-tab :to="{ name: 'blogPosts'}" ripple>
           <v-icon>code</v-icon>
          Blog
         </v-tab>
