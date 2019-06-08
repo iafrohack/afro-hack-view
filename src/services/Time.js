@@ -8,7 +8,9 @@ export default class Time {
   static getDefaultTimeString(timeString, convertToLocal = true) {
     const timeInstance = Time.getTimeInstance(timeString, convertToLocal);
 
-    return timeInstance.format(DATE_FORMATS.DEFAULT_DATE_TIME);
+    const formattedTimeString = timeInstance.format(DATE_FORMATS.DEFAULT_DATE_TIME);
+    const timeZone = moment.tz(Time.getBrowserTimezone()).zoneAbbr();
+    return `${formattedTimeString} ${timeZone}`;
   }
 
   static getDateTimeString(timeString, convertToLocal = true) {

@@ -65,8 +65,8 @@ export default {
       return Time.getDefaultTimeString(createdAt);
     },
     postLastUpdatedDateTime() {
-      const { createdAt } = this.blogPost;
-      return Time.getDefaultTimeString(createdAt);
+      const { lastUpdatedAt } = this.blogPost;
+      return Time.getDefaultTimeString(lastUpdatedAt);
     },
   },
 };
