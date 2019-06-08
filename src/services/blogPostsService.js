@@ -1,7 +1,6 @@
 
 import ApiRequestsService from '@/services/apiRequestsService';
 
-
 export default class BlogPostsService {
 
   static async getAllBlogPosts(blogsComponent) {
@@ -23,6 +22,16 @@ export default class BlogPostsService {
       currentPage: currentPage + 1,
     };
     return blogPosts;
+  }
+
+  static async getBlogPost(postViewerComponent, blogPostId) {
+    const apiEndPoint = `posts/${blogPostId}`;
+
+    const blogPost = await ApiRequestsService.fetchRecords(postViewerComponent, apiEndPoint);
+
+    postViewerComponent.blogPost = blogPost;
+
+    return blogPost;
   }
 
   static getOffset(blogsComponent) {
