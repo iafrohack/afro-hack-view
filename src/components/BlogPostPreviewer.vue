@@ -14,7 +14,6 @@
                 <div class="title-style">
                 {{ postTitle }}
                 </div>
-
                 <v-spacer />
               <span class="grey--text" v-html="postSummary">
               </span>
@@ -22,9 +21,11 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="purple">{{ postCreationDate }}</v-btn>
+            <v-btn flat color="purple">{{ postCreationDateTime }}</v-btn>
 
-            <v-btn flat @click.prevent="navigateToBlogPost" ripple>
+            <v-btn flat @click.prevent="navigateToBlogPost"
+            class="read-more-button"
+            ripple>
             <v-icon>code</v-icon>
             Read more...
             </v-btn>
@@ -38,6 +39,8 @@
    </div>
 </template>
 <script>
+
+import Time from '@/services/Time';
 
 export default {
   name: 'BlogPostPreviewer',
@@ -57,8 +60,9 @@ export default {
     postBackgroundImage() {
       return this.blogPost.backgroundImage || '';
     },
-    postCreationDate() {
-      return this.blogPost.createdAt;
+    postCreationDateTime() {
+      const { createdAt } = this.blogPost;
+      return Time.getDefaultTimeString(createdAt);
     },
   },
   methods: {
@@ -90,6 +94,10 @@ a {
 
 .title-style {
    font-size: 18px;
+}
+
+.read-more-button {
+  margin-left: 30% !important;
 }
 
 </style>

@@ -39,4 +39,6 @@ export default class BlogPostsService {
 
     return (currentPage - 1) * resultsPerPage;
   }
+
+
 }

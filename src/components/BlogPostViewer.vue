@@ -7,8 +7,14 @@
       tag="section"
     >
       <v-layout row wrap>
-        <v-flex tag="h1" class="headline blogTitle"
-        v-html="blogPost.title" />
+        <v-flex tag="h1" class="headline blogTitle">
+
+        <div v-html="blogPost.title">
+         </div>
+         <div class="publish-time-stamp">
+         Published on {{ postCreationDateTime }}
+         </div>
+        </v-flex>
         <v-flex d-flex xs12 order-xs5>
           <v-layout column>
             <v-flex>
@@ -32,6 +38,7 @@
 
 import BlogPostsService from '@/services/blogPostsService';
 import { isEmpty as _isEmpty } from 'lodash';
+import Time from '@/services/Time';
 
 export default {
   name: 'BlogPostViewer',
@@ -52,6 +59,14 @@ export default {
   computed: {
     hasBlogPost() {
       return !_isEmpty(this.blogPost);
+    },
+    postCreationDateTime() {
+      const { createdAt } = this.blogPost;
+      return Time.getDefaultTimeString(createdAt);
+    },
+    postLastUpdatedDateTime() {
+      const { createdAt } = this.blogPost;
+      return Time.getDefaultTimeString(createdAt);
     },
   },
 };
@@ -78,5 +93,10 @@ a {
 
 .blogTitle {
   margin-bottom: 40px;
+}
+
+.publish-time-stamp {
+ text-align: left;
+ font-size: 0.5em;
 }
 </style>
