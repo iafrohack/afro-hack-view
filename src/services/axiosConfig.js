@@ -7,8 +7,8 @@ const successStatusCode = 200;
 export default class Axiosconfig {
 
   static getInstance() {
-    // TODO:: will change once backend is deployed
-    const baseUrl = 'http://0.0.0.0';
+    // TODO:: will change & use SSL once backend SSL is good to go...
+    const baseUrl = 'http://backend.iafrohack.com/';
 
     const headers = { 'X-Requested-With': 'XMLHttpRequest' };
 
