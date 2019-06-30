@@ -8,7 +8,7 @@
     "dev": "node build/dev-server.js",
     "start": "npm run dev webpack-dev-server --inline --hot",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --fix --ext .js,.vue src",
     "s3-deploy": "node build/build.js && aws s3 sync ./dist s3://iafrohack.com",
     "s3-deploy-www": "node build/build.js && aws s3 sync ./dist s3://www.iafrohack.com"
   },
