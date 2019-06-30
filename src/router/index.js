@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import BlogPostViewer from '@/components/BlogPostViewer';
 import BlogPosts from '@/components/BlogPosts';
+import * as END_POINTS from '@/constants/endPoints';
 
 // Vue.use(VueMaterial);
 Vue.use(Router);
@@ -27,6 +28,13 @@ export default new Router({
       component: BlogPostViewer,
       props: route => ({ blogPostId: route.params.blogPostId }),
     },
+
+    {
+      path: '/github',
+      name: 'github',
+      beforeEnter() { location.href = END_POINTS.IAFROHACK_GITHUB_HOME; },
+    },
+
 
     { path: '*', redirect: '/' },
   ],

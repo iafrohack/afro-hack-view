@@ -16,8 +16,13 @@
          Home
         </v-tab>
         <v-tab :to="{ name: 'blogPosts'}" ripple>
-          <v-icon>code</v-icon>
+          <v-icon>speaker_notes</v-icon>
          Blog
+        </v-tab>
+
+        <v-tab :to="{ name: 'github'}" ripple>
+          <v-icon>code</v-icon>
+         Github
         </v-tab>
 
       </v-tabs>
