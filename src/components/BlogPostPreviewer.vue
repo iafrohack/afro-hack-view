@@ -22,16 +22,16 @@
 
           <v-card-actions>
           <v-btn flat @click.prevent="navigateToBlogPost"
-            class="read-more-button"
             ripple>
-            <v-icon>code</v-icon>
+            <v-icon class="read-more-icon">code</v-icon>
             Read more...
             </v-btn>
             <v-spacer />
-            <v-btn flat color="purple">{{ postPublishedAtDateTime }}</v-btn>
-
+            <v-btn flat color="purple"
+            class="published-at-button">
+            {{ postPublishedAtDateTime }}
+            </v-btn>
           </v-card-actions>
-
         </v-card>
       </v-flex>
     </v-layout>
@@ -96,8 +96,11 @@ a {
    font-size: 18px;
 }
 
-.read-more-button {
-  margin-left: 30% !important;
+.published-at-button {
+  margin-right: 15% !important;
 }
 
+.read-more-icon {
+   margin-right: 5px;
+}
 </style>
