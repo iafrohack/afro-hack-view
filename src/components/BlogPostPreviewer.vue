@@ -21,17 +21,17 @@
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="purple">{{ postCreationDateTime }}</v-btn>
-
-            <v-btn flat @click.prevent="navigateToBlogPost"
-            class="read-more-button"
+          <v-btn flat @click.prevent="navigateToBlogPost"
             ripple>
-            <v-icon>code</v-icon>
+            <v-icon class="read-more-icon">code</v-icon>
             Read more...
             </v-btn>
             <v-spacer />
+            <v-btn flat color="purple"
+            class="published-at-button">
+            {{ postPublishedAtDateTime }}
+            </v-btn>
           </v-card-actions>
-
         </v-card>
       </v-flex>
     </v-layout>
@@ -60,9 +60,9 @@ export default {
     postBackgroundImage() {
       return this.blogPost.backgroundImage || '';
     },
-    postCreationDateTime() {
-      const { createdAt } = this.blogPost;
-      return Time.getDefaultTimeString(createdAt);
+    postPublishedAtDateTime() {
+      const { publishedAt } = this.blogPost;
+      return Time.getDefaultTimeString(publishedAt);
     },
   },
   methods: {
@@ -96,8 +96,11 @@ a {
    font-size: 18px;
 }
 
-.read-more-button {
-  margin-left: 30% !important;
+.published-at-button {
+  margin-right: 15% !important;
 }
 
+.read-more-icon {
+   margin-right: 5px;
+}
 </style>
