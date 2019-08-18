@@ -12,7 +12,7 @@
         <div v-html="blogPost.title">
          </div>
          <div class="publish-time-stamp">
-         Published on {{ postCreationDateTime }}
+         Published on {{ postPublishedAtDateTime }}
          </div>
         </v-flex>
         <v-flex d-flex xs12 order-xs5>
@@ -44,7 +44,7 @@ export default {
   name: 'BlogPostViewer',
   props: {
     blogPostId: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
@@ -60,9 +60,9 @@ export default {
     hasBlogPost() {
       return !_isEmpty(this.blogPost);
     },
-    postCreationDateTime() {
-      const { createdAt } = this.blogPost;
-      return Time.getDefaultTimeString(createdAt);
+    postPublishedAtDateTime() {
+      const { publishedAt } = this.blogPost;
+      return Time.getDefaultTimeString(publishedAt);
     },
     postLastUpdatedDateTime() {
       const { lastUpdatedAt } = this.blogPost;

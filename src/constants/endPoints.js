@@ -1,5 +1,8 @@
 
-const IAFROHACK_BACKEND_BASE_URL = 'https://backend.iafrohack.com';
+// for localHost
+const IAFROHACK_BACKEND_BASE_URL = 'http://localhost';
+
+// const IAFROHACK_BACKEND_BASE_URL = 'https://backend.iafrohack.com';
 
 const IAFROHACK_GITHUB_HOME = 'https://github.com/iafrohack';
 
