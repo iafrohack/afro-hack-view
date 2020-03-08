@@ -20,6 +20,11 @@
          Blog
         </v-tab>
 
+        <v-tab :to="{ name: 'blogEditor'}" ripple>
+          <v-icon>code</v-icon>
+         Blog Editor
+        </v-tab>
+
         <v-tab :to="{ name: 'github'}" ripple>
           <v-icon>code</v-icon>
          Github

@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import BlogPostViewer from '@/components/BlogPostViewer';
 import BlogPosts from '@/components/BlogPosts';
+import BlogEditor from '@/components/BlogEditor';
 import * as END_POINTS from '@/constants/endPoints';
 
 // Vue.use(VueMaterial);
@@ -27,6 +28,11 @@ export default new Router({
       name: 'blogPost',
       component: BlogPostViewer,
       props: route => ({ blogPostId: route.params.blogPostId }),
+    },
+    {
+      path: '/blogEditor',
+      name: 'blogEditor',
+      component: BlogEditor,
     },
 
     {
