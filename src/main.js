@@ -4,10 +4,12 @@
 import 'babel-polyfill';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import VueClipboard from 'vue-clipboard2';
 import App from './App';
 import router from './router';
 
 Vue.use(Vuetify);
+Vue.use(VueClipboard);
 
 Vue.config.productionTip = false;
 

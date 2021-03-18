@@ -1,5 +1,6 @@
 <template>
      <main>
+       <social class="social-embed" />
        <v-content>
          <section>
            <v-parallax src="//s3.amazonaws.com/iafrohack.com/images/hero.jpeg" height="600">
@@ -170,7 +171,7 @@
                          <v-icon class="blue--text text--lighten-2">email</v-icon>
                        </v-list-tile-action>
                        <v-list-tile-content>
-                         <v-list-tile-title>coming up...</v-list-tile-title>
+                         <v-list-tile-title>iafrohack@gmail.com</v-list-tile-title>
                        </v-list-tile-content>
                      </v-list-tile>
                    </v-list>
@@ -184,13 +185,22 @@
    </v-app>
 </template>
 <script>
+import Social from '@/components/Social';
+
 export default {
   name: 'Home',
+  components: {
+    Social,
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.social-embed {
+  float: right !important;
+}
+
 h1, h2 {
   font-weight: normal;
 }

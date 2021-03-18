@@ -1,5 +1,6 @@
 <template>
 <div id="app-main-container">
+
   <v-app light>
     <v-tabs
         dark
@@ -20,6 +21,11 @@
          Blog
         </v-tab>
 
+        <v-tab :to="{ name: 'blogEditor'}" ripple>
+          <v-icon>code</v-icon>
+         Blog Editor
+        </v-tab>
+
         <v-tab :to="{ name: 'github'}" ripple>
           <v-icon>code</v-icon>
          Github
@@ -30,6 +36,7 @@
        <router-view></router-view>
    </v-fade-transition>
   </v-app>
+
   <footer-container />
 </div>
 
