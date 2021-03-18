@@ -26,7 +26,7 @@
     </div>
 
     <div>
-        <br /><br /> 
+        <br /><br />
         <button v-clipboard:copy="content" class="copy-html">
  Click here to copy the Generated Html to your clipboard
         </button>
@@ -149,9 +149,10 @@ a {
   height: 100px !important;
 }
 
-/deep/ .ql-container .ql-snow {
-  border-bottom: hidden;
+/deep/ .ql-snow {
+  border-color: transparent !important;
 }
+
 .social-embed {
   float: right !important;
 }
