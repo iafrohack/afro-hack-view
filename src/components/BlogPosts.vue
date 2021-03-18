@@ -1,10 +1,20 @@
 <template>
   <div class="blogs-list">
+    <social class="social-embed" />
    <v-layout>
       <v-flex md12 md6>
         <v-card>
           <v-container v-bind="{ 'grid-list-md': true }" fluid>
             <v-layout row wrap>
+              <v-btn v-if="loading"
+                color="primary"
+                elevation="24"
+                fab
+                loading
+                rounded
+                x-large
+                class="loading-icon">
+              </v-btn>
               <v-flex
                 v-for="blogPost in blogPosts"
                 :key="blogPost.id"
@@ -14,6 +24,7 @@
             </v-layout>
           </v-container>
         </v-card>
+
       </v-flex>
     </v-layout>
   </div>
@@ -22,11 +33,13 @@
 
 import BlogPostsService from '@/services/blogPostsService';
 import BlogPostPreviewer from '@/components/BlogPostPreviewer';
+import Social from '@/components/Social';
 
 export default {
   name: 'BlogPosts',
   components: {
     BlogPostPreviewer,
+    Social,
   },
   mounted() {
     BlogPostsService.getAllBlogPosts(this);
@@ -64,5 +77,12 @@ a {
   color: #42b983;
 }
 
+.social-embed {
+  float: right !important;
+}
 
+.loading-icon {
+  margin-top:10%;
+  margin-left:50%;
+}
 </style>

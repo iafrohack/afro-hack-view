@@ -2,10 +2,12 @@
 
 <div class="blog-editor">
 
+    <social class="social-embed" />
+    <br/> I use this editor for composing the blog posts.
     <br />
 
     Edit your contents in the editor down here and copy the generated Html
-    for use where you need to. <br /><br />
+    to your clipboard for use where you need to. <br /><br />
 
     This is powered by VueQuill editor: https://github.com/surmon-china/vue-quill-editor.
 
@@ -24,18 +26,14 @@
     </div>
 
     <div>
-        <br /><br />
-
-
-         <span>
-                 <button v-clipboard:copy="content">Click here to copy the Generated Html</button>
-         </span>
+        <br /><br /> 
+        <button v-clipboard:copy="content" class="copy-html">
+ Click here to copy the Generated Html to your clipboard
+        </button>
 
          <br /><br/><br />
 
         <div class="quill-code">
-
-
           <code class="hljs" v-html="contentCode"></code>
         </div>
     </div>
@@ -48,11 +46,13 @@ import 'quill/dist/quill.snow.css';
 import 'quill/dist/quill.bubble.css';
 import { quillEditor } from 'vue-quill-editor';
 import hljs from 'highlight.js';
+import Social from '@/components/Social';
 
 export default {
   name: 'BlogEditor',
   components: {
     quillEditor,
+    Social,
   },
   computed: {
     editor() {
@@ -144,5 +144,23 @@ a {
       overflow-y: auto;
       resize: vertical;
     }
-  }
+}
+/deep/ .ql-toolbar {
+  height: 100px !important;
+}
+
+/deep/ .ql-container .ql-snow {
+  border-bottom: hidden;
+}
+.social-embed {
+  float: right !important;
+}
+
+.copy-html {
+  color: #2bbcd4;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 10px !important;
+}
+
 </style>

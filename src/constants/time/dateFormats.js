@@ -3,7 +3,9 @@ const TODAY_STRING = 'Today';
 const DEFAULT_TODAY = 'LT'; // Hour:Minutes AM/PM
 const DEFAULT_TODAY_DATE = 'l';
 const DEFAULT_MONTH_YEAR = 'MMMM YYYY';
-const DEFAULT_DATE_TIME = 'ddd, MMMM Do YYYY h:mm a';
+// const DEFAULT_DATE_TIME = 'ddd, MMMM Do YYYY h:mm a';
+
+const DEFAULT_DATE_TIME = 'MMM DD YYYY h:mm a';
 
 export {
   TODAY_STRING,

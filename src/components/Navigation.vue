@@ -1,4 +1,5 @@
 <template>
+
   <v-tabs dark fixed icons centered>
    <v-tabs-bar class="cyan">
       <v-tabs-slider color="yellow"></v-tabs-slider>
@@ -19,9 +20,12 @@
  <v-fade-transition mode="out-in">
      <router-view></router-view>
  </v-fade-transition>
+
+
 </template>
 
 <script>
+
 export default {
   data() {
     return {

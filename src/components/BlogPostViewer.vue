@@ -6,6 +6,7 @@
       grid-list-sm
       tag="section"
     >
+    <social class="social-embed" />
       <v-layout row wrap>
         <v-flex tag="h1" class="headline blogTitle">
 
@@ -39,6 +40,7 @@
 import BlogPostsService from '@/services/blogPostsService';
 import { isEmpty as _isEmpty } from 'lodash';
 import Time from '@/services/Time';
+import Social from '@/components/Social';
 
 export default {
   name: 'BlogPostViewer',
@@ -47,6 +49,9 @@ export default {
       type: String,
       required: true,
     },
+  },
+  components: {
+    Social,
   },
   mounted() {
     BlogPostsService.getBlogPost(this, this.blogPostId);
@@ -99,4 +104,9 @@ a {
  text-align: left;
  font-size: 0.5em;
 }
+
+.social-embed {
+  float: right !important;
+}
+
 </style>

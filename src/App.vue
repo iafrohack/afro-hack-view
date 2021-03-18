@@ -1,5 +1,6 @@
 <template>
 <div id="app-main-container">
+
   <v-app light>
     <v-tabs
         dark
@@ -35,6 +36,7 @@
        <router-view></router-view>
    </v-fade-transition>
   </v-app>
+
   <footer-container />
 </div>
 

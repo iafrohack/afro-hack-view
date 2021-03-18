@@ -4,6 +4,7 @@ import ApiRequestsService from '@/services/apiRequestsService';
 export default class BlogPostsService {
 
   static async getAllBlogPosts(blogsComponent) {
+    blogsComponent.loading = true;
     const apiEndPoint = 'posts';
 
     const { resultsPerPage, currentPage } = blogsComponent.pagination;
@@ -21,6 +22,7 @@ export default class BlogPostsService {
       ...blogsComponent.pagination,
       currentPage: currentPage + 1,
     };
+    blogsComponent.loading = false;
     return blogPosts;
   }
 
