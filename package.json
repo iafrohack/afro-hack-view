@@ -13,7 +13,7 @@
     "s3-deploy-www": "node build/build.js && aws s3 sync ./dist s3://www.iafrohack.com"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "highlight.js": "^9.15.10",
     "lodash": "^4.17.11",
