@@ -1,37 +1,40 @@
 <template>
      <main>
-       <social class="social-embed" />
-       <v-content>
-         <section>
-           <v-parallax src="//s3.amazonaws.com/iafrohack.com/images/hero.jpeg" height="600">
-             <v-layout
-               column
-               align-center
-               justify-center
-               class="white--text"
-             >
+       <v-content class="main-content">
 
-               <h1 class="white--text mb-2 display-1 text-xs-center">iafrohack</h1>
-               <div class="subheading mb-3 text-xs-center">Learn, have fun, enjoy!</div>
-               <v-btn
-                 class="blue lighten-2 mt-5"
-                 dark
-                 large>
+         <div class="row">
+           <section class="double-column">
+             <v-parallax src="//s3.amazonaws.com/iafrohack.com/images/hero.jpeg" height="600">
+               <v-layout
+                 align-center
+                 justify-center
+                 class="white--text double-column"
+               >
 
-               <v-tab :to="{name: 'blogPosts'}" ripple>
-                   <v-icon>code</v-icon>
-                     Check out the blogs...
-                </v-tab>
-               </v-btn>
-             </v-layout>
-           </v-parallax>
-         </section>
+                 <h1 class="white--text mb-2 display-1 text-xs-center">iafrohack</h1>
+                 <div class="subheading mb-3 text-xs-center">Learn, have fun, enjoy!</div>
+                 <v-btn
+                   class="blue lighten-2 mt-5"
+                   dark
+                   large>
 
-         <section>
+                 <v-tab :to="{name: 'blogPosts'}" ripple>
+                     <v-icon>code</v-icon>
+                       Check out the blogs...
+                  </v-tab>
+                 </v-btn>
+               </v-layout>
+             </v-parallax>
+           </section>
+
+           <social class="social-embed column" />
+
+       </div>
+
+         <section class="row">
            <v-layout
-             column
              wrap
-             class="my-5"
+             class="my-5 double-column"
              align-center
            >
              <v-flex xs12 sm4 class="my-3">
@@ -96,7 +99,7 @@
 
          <section>
            <v-parallax src="//s3.amazonaws.com/iafrohack.com/images/section.jpeg" height="380">
-             <v-layout column align-center justify-center>
+             <v-layout class="double-column" align-center justify-center>
                <div class="headline white--text mb-3 text-xs-center">
                Never doubt your own abilities...
 
@@ -181,6 +184,7 @@
            </v-container>
          </section>
        </v-content>
+
      </main>
    </v-app>
 </template>

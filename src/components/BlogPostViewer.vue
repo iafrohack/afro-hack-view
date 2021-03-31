@@ -5,9 +5,10 @@
       fluid
       grid-list-sm
       tag="section"
+      class="row"
     >
-    <social class="social-embed" />
-      <v-layout row wrap>
+
+      <v-layout wrap class="double-column">
         <v-flex tag="h1" class="headline blogTitle">
 
         <div v-html="blogPost.title">
@@ -17,7 +18,7 @@
          </div>
         </v-flex>
         <v-flex d-flex xs12 order-xs5>
-          <v-layout column>
+          <v-layout class="double-column">
             <v-flex>
               <v-card flat>
                 <v-card-text
@@ -33,6 +34,8 @@
           </v-layout>
         </v-flex>
       </v-layout>
+
+      <social class="social-embed column" />
     </v-container>
 </template>
 <script>

@@ -1,7 +1,6 @@
 <template>
-  <div class="blogs-list">
-    <social class="social-embed" />
-   <v-layout>
+  <div class="blogs-list row">
+   <v-layout class="double-column">
       <v-flex md12 md6>
         <v-card>
           <v-container v-bind="{ 'grid-list-md': true }" fluid>
@@ -19,7 +18,7 @@
                 v-for="blogPost in blogPosts"
                 :key="blogPost.id"
                 md6>
-             <blog-post-previewer :blog-post="blogPost" />
+             <blog-post-previewer :blog-post="blogPost" class="double-column"/>
               </v-flex>
             </v-layout>
           </v-container>
@@ -27,6 +26,7 @@
 
       </v-flex>
     </v-layout>
+    <social class="social-embed column" />
   </div>
 </template>
 <script>

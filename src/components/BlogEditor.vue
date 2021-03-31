@@ -1,42 +1,48 @@
 <template>
 
-<div class="blog-editor">
-
-    <social class="social-embed" />
-    <br/> I use this editor for composing the blog posts.
-    <br />
-
-    Edit your contents in the editor down here and copy the generated Html
-    to your clipboard for use where you need to. <br /><br />
-
-    This is powered by VueQuill editor: https://github.com/surmon-china/vue-quill-editor.
-
-    <br /><br /><br />
+<div class="blog-editor row">
 
 
-    <div class="quill-editor-example">
 
-        <quill-editor ref="myTextEditor"
-                      v-model="content"
-                      :options="editorOption"
-                      @blur="onEditorBlur($event)"
-                      @focus="onEditorFocus($event)"
-                      @ready="onEditorReady($event)">
-        </quill-editor>
+    <div class="double-column">
+      <br/> I use this editor for composing the blog posts.
+      <br />
+
+      Edit your contents in the editor down here and copy the generated Html
+      to your clipboard for use where you need to. <br /><br />
+
+      This is powered by VueQuill editor: https://github.com/surmon-china/vue-quill-editor.
+
+      <br /><br /><br />
+
+
+      <div class="quill-editor-example">
+
+          <quill-editor ref="myTextEditor"
+                        v-model="content"
+                        :options="editorOption"
+                        @blur="onEditorBlur($event)"
+                        @focus="onEditorFocus($event)"
+                        @ready="onEditorReady($event)">
+          </quill-editor>
+      </div>
+
+      <div>
+          <br /><br />
+          <button v-clipboard:copy="content" class="copy-html">
+              Click here to copy the Generated Html to your clipboard
+          </button>
+
+           <br /><br/><br />
+
+          <div class="quill-code">
+            <code class="hljs" v-html="contentCode"></code>
+          </div>
+      </div>
+
     </div>
 
-    <div>
-        <br /><br />
-        <button v-clipboard:copy="content" class="copy-html">
- Click here to copy the Generated Html to your clipboard
-        </button>
-
-         <br /><br/><br />
-
-        <div class="quill-code">
-          <code class="hljs" v-html="contentCode"></code>
-        </div>
-    </div>
+    <social class="social-embed column" />
 </div>
 </template>
 <script>
